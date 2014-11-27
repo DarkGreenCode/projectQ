@@ -29,7 +29,7 @@ $projectQ = new OpenGuild();
             <div class="col-lg-6">
                 <div class="panel panel-danger">
                     <div class="panel-heading">Ranking najlepszych dziesięciu gildii</div>
-                    <table class="table table-hover table-condensed">
+                    <table class="table table-hover">
                         <? $projectQ -> topGuilds(); ?>
                     </table>
                 </div>
