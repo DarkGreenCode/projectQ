@@ -2,9 +2,9 @@
 #####Projekt systemu statystyk dedykowanego pluginowi OpenGuild. Stworzony jako darmowa alternatywa dla twórców serwerów.
 
 ## Funkcje
-- [ ] Wyświetlanie rankingu "top" graczy i gildii.
-- [ ] Wyszukiwanie graczy i gildii.
-- [ ] Wyświetlanie szczegółowych informacji o graczach i gildiach.
+- [x] Wyświetlanie rankingu "top" graczy i gildii.
+- [x] Wyszukiwanie graczy i gildii.
+- [x] Wyświetlanie szczegółowych informacji o graczach i gildiach.
 - [x] Pokazanie dynamicznego statusu serwera (opcjonalnie).
 - [x] Możliwość użycia wielu predefiniowanych motywów.
 - [x] Kompatybilność wyświetlania dla urządzeń mobilnych.
