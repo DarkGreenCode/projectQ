@@ -53,7 +53,7 @@ class OpenGuildQueries extends MysqliQueriesManager {
                 $sort = 'DESC'; 
                 $rsort = 'ASC';
             }
-            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(lastseenname) as members FROM ".MYSQL_PREFIX."players INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
+            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(lastseenname) as members FROM ".MYSQL_PREFIX."players INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag GROUP BY tag ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
         }
     }
 
