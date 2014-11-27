@@ -36,7 +36,7 @@ $projectQ = new OpenGuild();
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Wyniki wyszukiwania wśród gildii</div>
-                    <table class="table table-condensed table-hover">
+                    <table class="table table-hover">
                         <? $projectQ -> searchGuild($_GET['search']); ?>
                     </table>
                 </div>
