@@ -9,7 +9,7 @@
  */
 
 // Czy ma być wyświetlany dynamiczny status serwera? (true/false)
-define("STATUS", true);
+define("STATUS", TRUE);
 
 // Adres dla serwera Minecraft, zwykle można zostawić domyslny.
 define("STATUS_IP", "127.0.0.1");
