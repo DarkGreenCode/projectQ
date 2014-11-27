@@ -27,7 +27,7 @@ class MysqliQueriesManager {
                     $results[] = $row;
                 }
                 return $results;
-		    }
+            }
         }
     }
 
@@ -37,7 +37,7 @@ class MysqliQueriesManager {
         if (!empty($result)) {
             if ($result->num_rows > 0) {
                 return true;
-		    } else {
+            } else {
                 return false;
             }
         } else {
