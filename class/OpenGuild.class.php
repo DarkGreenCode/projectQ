@@ -186,7 +186,7 @@ class OpenGuild {
                     </table>
             </div></div>";
 
-            echo '<div class="col-md-6">';
+            echo '<div class="col-md-6" style="text-align: right;">';
                 $members_info = array_combine(explode(", ", $guild->members_name), explode(", ", $guild->members_uuid));
                 foreach ($members_info as $name => $uuid) {
                     echo "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"https://minespy.net/api/head/{$name}\" alt=\"{$name}\" title=\"{$name}\" width=\"25%\" class=\"img-thumbnail\"></img></a>";
