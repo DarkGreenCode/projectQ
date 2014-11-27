@@ -175,7 +175,7 @@ class OpenGuild {
         } else {
             echo "
             <div class=\"col-lg-offset-1 col-lg-11\"><h1>[{$guild->tag}]<small>{$guild->description}</small></h1></div>
-            <div class=\"col-md-8\"><div class=\"panel panel-info\">
+            <div class=\"col-md-6\"><div class=\"panel panel-info\">
                     <table class=\"table\">
                         <tbody>
                             <tr><th class=\"info\">Ilość członków</th><td>{$guild->members}</td></tr>
@@ -186,7 +186,7 @@ class OpenGuild {
                     </table>
             </div></div>";
 
-            echo '<div class="col-md-4">';
+            echo '<div class="col-md-6">';
                 $members_info = array_combine(explode(", ", $guild->members_name), explode(", ", $guild->members_uuid));
                 foreach ($members_info as $name => $uuid) {
                     echo "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"https://minespy.net/api/head/{$name}\" alt=\"{$name}\" title=\"{$name}\" width=\"25%\" class=\"img-thumbnail\"></img></a>";
