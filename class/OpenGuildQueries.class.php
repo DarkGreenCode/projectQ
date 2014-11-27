@@ -72,7 +72,7 @@ class OpenGuildQueries extends MysqliQueriesManager {
 
     public function searchGuild($guild) {
         if ($this->checkTables === TRUE) {
-            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(lastseenname) as members FROM ".MYSQL_PREFIX."players INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag WHERE tag LIKE '{$guild}%' ORDER BY tag LIMIT 100");
+            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(lastseenname) as members FROM ".MYSQL_PREFIX."players INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag WHERE tag LIKE '{$guild}%' GROUP BY tag ORDER BY tag LIMIT 100");
         }
     }
 
