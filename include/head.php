@@ -57,7 +57,7 @@ require_once CONF_ROOT.CONF_CATALOG.'config/status.conf.php'; ?>
         </div>
     </nav>
 
-<? if (STATUS == 'true') {
+<? if (STATUS == TRUE) {
     require_once CONF_ROOT.CONF_CATALOG.'class/MinecraftServerStatus.class.php';
     $status = new MinecraftServerStatus(); 
     $response = $status->getStatus(STATUS_IP, STATUS_VER , STATUS_PORT);
