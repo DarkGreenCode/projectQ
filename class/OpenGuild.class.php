@@ -77,7 +77,7 @@ class OpenGuild {
             if (!empty($players[$c])) {
                 $link['player'] = "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$players[$c]->uuid}\">";
                 $link['guild'] = "<a href=\"".CONF_CATALOG."infoGuild.php?guild={$players[$c]->guild}\">";
-                $skin = "<img src=\"https://minespy.net/api/head/{$players[$c]->name}/{$this->skinSize}\" title=\"{$players[$c]->name}\" class=\"img-rounded\"></img>";
+                $skin = "<img src=\"http://avatar.hivemc.com/avatar/{$players[$c]->name}/{$this->skinSize}\" title=\"{$players[$c]->name}\" class=\"img-rounded\"></img>";
 
                 echo
                 "<tr>
@@ -150,7 +150,7 @@ class OpenGuild {
             foreach ($players as $player) {
                 $link['player'] = "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$player->uuid}\">";
                 $link['guild'] = "<a href=\"".CONF_CATALOG."infoGuild.php?guild={$player->guild}\">";
-                $skin = "<img src=\"https://minespy.net/api/head/{$player->name}/{$this->skinSize}\" title=\"{$player->name}\" class=\"img-rounded\"></img>";
+                $skin = "<img src=\"http://avatar.hivemc.com/avatar/{$player->name}/{$this->skinSize}\" title=\"{$player->name}\" class=\"img-rounded\"></img>";
 
                 echo
                 "<tr>
@@ -189,7 +189,7 @@ class OpenGuild {
             echo '<div class="col-md-6" style="text-align: right;">';
                 $members_info = array_combine(explode(", ", $guild->members_name), explode(", ", $guild->members_uuid));
                 foreach ($members_info as $name => $uuid) {
-                    echo "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"https://minespy.net/api/head/{$name}\" alt=\"{$name}\" title=\"{$name}\" width=\"25%\" class=\"img-thumbnail\"></img></a>";
+                    echo "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"http://avatar.hivemc.com/avatar/{$name}/200\" alt=\"{$name}\" title=\"{$name}\" width=\"25%\" class=\"img-thumbnail\"></img></a>";
                 }
             echo '</div>';
         }
@@ -217,7 +217,7 @@ class OpenGuild {
                     </table>
             </div></div>
             <div class=\"col-md-4\">
-                <img src=\"https://minespy.net/api/head/{$player->name}\" width=\"100%\" class=\"img-thumbnail\"></img>
+                <img src=\"http://avatar.hivemc.com/avatar/{$player->name}/400\" width=\"100%\" class=\"img-thumbnail\"></img>
             </div>";
         }
     }
