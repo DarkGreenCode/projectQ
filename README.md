@@ -9,6 +9,14 @@
 - [x] Możliwość użycia wielu predefiniowanych motywów.
 - [x] Kompatybilność wyświetlania dla urządzeń mobilnych.
 
+## Instalacja
+* Pobierz najnowszą wersję stabilną: **https://github.com/SlimaKCoder/projectQ/archive/Stable.zip**
+* Wypakuj pliki do głównego folderu lub podfolderu na serwerze WWW.
+* Główna konfiguraca projectQ jest w pliku **config/main.conf.php**.
+* W **config/mysql.conf.php** powinienieś wpisać dane do bazy MySQL.
+* Dodatkowo w pliku **config/status.conf.php** są ustawienia dynamicznego statusu serwera.
+* W razie problemów możesz włączyć debugowanie od PHP5 w głównej konfiguracji.
+
 ## Wymagania
 * Serwer Minecraft z działającym pluginem OpenGuild.
 * Serwer MySQL w wersji 5.x.
