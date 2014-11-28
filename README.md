@@ -10,7 +10,7 @@
 - [x] Kompatybilność wyświetlania dla urządzeń mobilnych.
 
 ## Instalacja
-* Pobierz najnowszą wersję stabilną: **https://github.com/SlimaKCoder/projectQ/archive/Stable.zip**
+* Pobierz najnowszą wersję stabilną: **[projectQ-Stable.zip](https://github.com/SlimaKCoder/projectQ/archive/Stable.zip)**
 * Wypakuj pliki do głównego folderu lub podfolderu na serwerze WWW.
 * Główna konfiguraca projectQ jest w pliku **config/main.conf.php**.
 * W **config/mysql.conf.php** powinienieś wpisać dane do bazy MySQL.
