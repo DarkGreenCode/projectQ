@@ -8,7 +8,8 @@
  * @copyright   Copyright (c) 2014, SlimaK
  */
 
-// Ścieżka do katalogu ze stroną. Zmień jeżeli nie jest to główny katalog.
+// Ścieżka do podkatalogu z projectQ (domyślnie "/" czyli główny katalog dla serwera WWW).
+// Ważne! Na końcu nazwy podkatalogu nie może znajdować się znak slash.
 define("CONF_CATALOG", "/");
 
 // Opcja dla debugowania, nie zmieniaj jej jeżeli nie wiesz co robisz.
