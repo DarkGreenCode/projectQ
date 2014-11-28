@@ -1,5 +1,5 @@
 # projectQ
-#####Projekt systemu statystyk dedykowanego pluginowi OpenGuild. Stworzony jako darmowa alternatywa dla twórców serwerów.
+#####Projekt systemu statystyk WWW dla gildii. Stworzony jako darmowa alternatywa dla twórców serwerów.
 
 ## Funkcje
 - [x] Wyświetlanie rankingu "top" graczy i gildii.
@@ -9,13 +9,16 @@
 - [x] Możliwość użycia wielu predefiniowanych motywów.
 - [x] Kompatybilność wyświetlania dla urządzeń mobilnych.
 
+## Wspierane pluginy
+* OpenGuild (v. 0.6.5 +)
+ 
 ## Instalacja
-* Pobierz najnowszą wersję stabilną: **[projectQ-Stable.zip](https://github.com/SlimaKCoder/projectQ/archive/Stable.zip)**
-* Wypakuj pliki do głównego folderu lub podfolderu na serwerze WWW.
-* Główna konfiguraca projectQ jest w pliku **config/main.conf.php**.
-* W **config/mysql.conf.php** powinienieś wpisać dane do bazy MySQL.
-* Dodatkowo w pliku **config/status.conf.php** są ustawienia dynamicznego statusu serwera.
-* W razie problemów możesz włączyć debugowanie od PHP5 w głównej konfiguracji.
+1. Pobierz najnowszą wersję stabilną: **[projectQ-Stable.zip](https://github.com/SlimaKCoder/projectQ/archive/Stable.zip)**
+2. Wypakuj pliki do głównego folderu lub podfolderu na serwerze WWW.
+3. Główna konfiguraca projectQ jest w pliku **config/main.conf.php**.
+4. W **config/mysql.conf.php** powinienieś wpisać dane do bazy MySQL.
+5. Dodatkowo w pliku **config/status.conf.php** są ustawienia dynamicznego statusu serwera.
+6. W razie problemów możesz włączyć debugowanie od PHP5 w głównej konfiguracji.
 
 ## Wymagania
 * Serwer Minecraft z działającym pluginem OpenGuild.
