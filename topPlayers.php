@@ -28,7 +28,7 @@ $projectQ = new OpenGuild();
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-info">
-                    <div class="panel-heading">Ranking setki najgorszych nieudaczników</div>
+                    <div class="panel-heading">Ranking setki najgorszych graczy</div>
                     <table class="table table-condensed table-striped table-hover">
                         <? $projectQ -> topPlayers(100, true); ?>
                     </table>
