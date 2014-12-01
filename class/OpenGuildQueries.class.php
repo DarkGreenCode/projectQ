@@ -19,7 +19,6 @@ class OpenGuildQueries extends MysqliQueriesManager {
     public function __construct() {
         parent::__construct();
         $this->checkTables = $this->checkTables();
-        #$this->checkHardcoreModule = $this->checkHardcoreModule();
     }
 
     private function checkTables() {
@@ -37,12 +36,6 @@ class OpenGuildQueries extends MysqliQueriesManager {
         }
         return $return;
     }
-
-    #private function checkHardcoreModule() { 
-    #    if ($this->checkTables === TRUE) {
-    #        return $this->check("SELECT banTime FROM ".MYSQL_PREFIX."players LIMIT 1");
-    #    } else return FALSE;
-    #}
 
     public function topGuilds($max, $losers) {
         if ($this->checkTables === TRUE) {
