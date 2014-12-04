@@ -99,7 +99,7 @@ class OpenGuild {
         $guilds = $this->queries->searchGuild($guild);
 
         if (empty($guilds[0]->tag)) {
-            echo '<tbody><tr><td class="danger">Nie znaleziono takiej gildii w bazie.</td></tr></tbody>';
+            echo '<tbody><tr><td class="danger">Nie znaleziono żadnych gildii według podanego zapytania.</td></tr></tbody>';
         } else {
             echo '
             <thead>
@@ -132,7 +132,7 @@ class OpenGuild {
         $players = $this->queries->searchPlayer($player);
 
         if (empty($players[0]->name)) {
-            echo '<tbody><tr><td class="danger">Nie znaleziono takiego gracza w bazie.</tr></td></tbody>';
+            echo '<tbody><tr><td class="danger">Nie znaleziono żadnych graczy według podanego zapytania.</td></tr></tbody>';
         } else {
             echo '
             <thead>
