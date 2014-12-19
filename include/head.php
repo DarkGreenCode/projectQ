@@ -15,7 +15,7 @@ require_once CONF_ROOT.CONF_CATALOG.'config/status.conf.php'; ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Systen statystyk dla OpenGuild">
+    <meta name="description" content="System statystyk dla OpenGuild">
     <meta name="author" content="SlimaK">
 
     <title><? echo CONF_TITLE; ?></title>
@@ -48,7 +48,7 @@ require_once CONF_ROOT.CONF_CATALOG.'config/status.conf.php'; ?>
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="post">
                     <div class="form-group">
-                        <input name="search[name]" type="text" class="form-control" placeholder="Wyszukiwanie...">
+                        <input name="search[name]" type="search" class="form-control" placeholder="Wyszukiwanie...">
                     </div>
                     <input name="search[submit]" type="submit" class="btn btn-default" role="button" value="Szukaj">
                     <? if (isset($_POST['search'])) header('Location: '.CONF_CATALOG.'search.php?search='.$_POST['search']['name']); ?>
