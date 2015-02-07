@@ -21,7 +21,7 @@ define("MYSQL_DB", "<baza>");
 define("MYSQL_PREFIX", "openguild_");
 
 // Nazwa użytkownika mającego uprawnienia do podanej bazy.
-define("MYSQL_USER", "<użytkownik>");
+define("MYSQL_USER", "<uzytkownik>");
 
 // Hasło użytkownika mającego uprawnienia do podanej bazy.
-define("MYSQL_PASS", "<hasło>");
+define("MYSQL_PASS", "<haslo>");
