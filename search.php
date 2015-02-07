@@ -16,12 +16,12 @@ require_once CONF_ROOT.CONF_CATALOG.'class/OpenGuild.class.php';
 $projectQ = new OpenGuild();
 ?>
 
-<? if (!empty($_GET['search'])) { ?>
+<?php if (!empty($_GET['search'])) { ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="alert alert-info alert-dismissible" role="alert">
-                    Wyszukiwanie wśród nazw graczy i gildii zaczynających się od frazy: <b><? echo $_GET['search']; ?></b>
+                    Wyszukiwanie wśród nazw graczy i gildii zaczynających się od frazy: <b><?php echo $_GET['search']; ?></b>
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
                 </div>
             </div>
@@ -29,7 +29,7 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-default">
                     <div class="panel-heading">Wyniki wyszukiwania wśród graczy</div>
                     <table class="table table-condensed table-hover">
-                        <? $projectQ -> searchPlayer($_GET['search']); ?>
+                        <?php $projectQ -> searchPlayer($_GET['search']); ?>
                     </table>
                 </div>
             </div>
@@ -37,13 +37,13 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-default">
                     <div class="panel-heading">Wyniki wyszukiwania wśród gildii</div>
                     <table class="table table-hover">
-                        <? $projectQ -> searchGuild($_GET['search']); ?>
+                        <?php $projectQ -> searchGuild($_GET['search']); ?>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-<? } else { ?>
+<?php } else { ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -51,6 +51,6 @@ $projectQ = new OpenGuild();
             </div>
         </div>
     </div>
-<? } ?>
+<?php } ?>
 
-<? require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
+<?php require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>

@@ -17,8 +17,8 @@ $projectQ = new OpenGuild();
 ?>
     <div class="container">
         <div class="row">
-            <? $projectQ -> infoGuild($_GET['guild']); ?>
+            <?php $projectQ -> infoGuild($_GET['guild']); ?>
         </div>
     </div
 
-<? require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
+<?php require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>

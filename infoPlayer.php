@@ -17,8 +17,8 @@ $projectQ = new OpenGuild();
 ?>
     <div class="container">
         <div class="row">
-            <? $projectQ -> infoPlayer($_GET['uuid']); ?>
+            <?php $projectQ -> infoPlayer($_GET['uuid']); ?>
         </div>
     </div>
 
-<? require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
+<?php require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>

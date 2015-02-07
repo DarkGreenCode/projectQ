@@ -22,7 +22,7 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-danger">
                     <div class="panel-heading">Ranking setki najlepszych gildii</div>
                     <table class="table table-striped table-hover">
-                        <? $projectQ -> topGuilds(100); ?>
+                        <?php $projectQ -> topGuilds(100); ?>
                     </table>
                 </div>
             </div>
@@ -30,11 +30,11 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-success">
                     <div class="panel-heading">Ranking setki najgorszych gildii</div>
                     <table class="table table-striped table-hover">
-                        <? $projectQ -> topGuilds(100, true); ?>
+                        <?php $projectQ -> topGuilds(100, true); ?>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-<? require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
+<?php require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
