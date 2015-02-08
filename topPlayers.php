@@ -22,7 +22,7 @@ $projectQ = new Main();
                 <div class="panel panel-warning">
                     <div class="panel-heading">Ranking setki najlepszych graczy</div>
                     <table class="table table-condensed table-striped table-hover">
-                        <?php $projectQ -> topPlayers(15); ?>
+                        <?php $projectQ -> topPlayers(100); ?>
                     </table>
                 </div>
             </div>
@@ -30,7 +30,7 @@ $projectQ = new Main();
                 <div class="panel panel-info">
                     <div class="panel-heading">Ranking setki najgorszych graczy</div>
                     <table class="table table-condensed table-striped table-hover">
-                        <?php $projectQ -> topPlayers(15, true); ?>
+                        <?php $projectQ -> topPlayers(100, true); ?>
                     </table>
                 </div>
             </div>
