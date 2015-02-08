@@ -14,7 +14,6 @@ class FunnyGuildsQueries extends MysqliQueriesManager {
 
     protected $static_db;
     private $checkTables;
-    private $checkHardcoreModule;
 
     public function __construct() {
         parent::__construct();
@@ -26,8 +25,8 @@ class FunnyGuildsQueries extends MysqliQueriesManager {
         $return = TRUE;
 
         foreach ($tables as $table) {
-            $checkExist = $this->check("SHOW TABLES LIKE '".MYSQL_PREFIX.$table."'");
-            $checkNotEmpty = $this->check("SELECT * FROM ".MYSQL_PREFIX.$table." LIMIT 1");
+            $checkExist = $this->check("SHOW TABLES LIKE '{$table}'");
+            $checkNotEmpty = $this->check("SELECT * FROM `{$table}` LIMIT 1");
 
             if ($checkExist === FALSE || $checkNotEmpty === FALSE) {   
                 $return = FALSE;
@@ -46,7 +45,7 @@ class FunnyGuildsQueries extends MysqliQueriesManager {
                 $sort = 'DESC'; 
                 $rsort = 'ASC';
             }
-            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(name) as members FROM ".MYSQL_PREFIX."users INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag GROUP BY tag ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
+            return $this->query("SELECT guilds.tag AS tag, guilds.points AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(users.name) AS members FROM `users` INNER JOIN `guilds` ON users.guild = guilds.name GROUP BY tag ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
         }
     }
 
@@ -59,31 +58,31 @@ class FunnyGuildsQueries extends MysqliQueriesManager {
                 $sort = 'DESC'; 
                 $rsort = 'ASC';
             }
-            return $this->query("SELECT uuid, name, guild, points, kills, deaths FROM ".MYSQL_PREFIX."users ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
+            return $this->query("SELECT users.uuid AS uuid, users.name AS name, guilds.tag AS guild, users.points AS points, kills, deaths FROM `users` INNER JOIN `guilds` ON users.guild = guilds.name ORDER BY points {$sort}, kills {$sort}, deaths {$rsort} LIMIT ".$max*2);
         }
     }  
 
     public function searchGuild($guild) {
         if ($this->checkTables === TRUE) {
-            return $this->query("SELECT tag, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(lastseenname) as members FROM ".MYSQL_PREFIX."users INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag WHERE tag LIKE '{$guild}%' GROUP BY tag ORDER BY tag LIMIT 100");
+            return $this->query("SELECT tag, guilds.points AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(users.name) AS members FROM `users` INNER JOIN `guilds` ON users.guild = guilds.name WHERE tag LIKE '{$guild}%' GROUP BY tag ORDER BY tag LIMIT 100");
         }
     }
 
     public function searchPlayer($player) {
         if ($this->checkTables === TRUE) {
-            return $this->query("SELECT uuid, name, guild, points, kills, deaths FROM ".MYSQL_PREFIX."users WHERE name LIKE '{$player}%' ORDER BY name LIMIT 100");
+            return $this->query("SELECT users.uuid AS uuid, users.name AS name, guilds.tag AS guild, users.points AS points, kills, deaths FROM `users`  INNER JOIN `guilds` ON users.guild = guilds.name WHERE users.name LIKE '{$player}%' ORDER BY name LIMIT 100");
         }
     }
 
     public function infoGuild($guild) {
         if ($this->checkTables === TRUE) {
-            return $this->query("SELECT tag, deputy as description, SUM(points) AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(name) as members, GROUP_CONCAT(DISTINCT name ORDER BY points SEPARATOR ', ') as members_name, GROUP_CONCAT(DISTINCT uuid ORDER BY points SEPARATOR ', ') as members_uuid FROM ".MYSQL_PREFIX."users INNER JOIN ".MYSQL_PREFIX."guilds ON guild = tag WHERE tag = '{$guild}'");
+            return $this->query("SELECT tag, guilds.name AS description, guilds.points AS points, SUM(kills) AS kills, SUM(deaths) AS deaths, COUNT(users.name) AS members, GROUP_CONCAT(DISTINCT users.name ORDER BY users.points SEPARATOR ', ') AS members_name, GROUP_CONCAT(DISTINCT users.uuid ORDER BY users.points SEPARATOR ', ') AS members_uuid FROM `users` INNER JOIN `guilds` ON users.guild = guilds.name WHERE tag = '{$guild}'");
         }
     }
 
     public function infoPlayer($uuid) {
         if ($this->checkTables === TRUE) {
-            return $this->query("SELECT uuid, name, guild, points, kills, deaths FROM ".MYSQL_PREFIX."users WHERE uuid = '{$uuid}'");
+            return $this->query("SELECT users.uuid AS uuid, users.name AS name, guilds.tag AS guild, users.points AS points, kills, deaths FROM `users` INNER JOIN `guilds` ON users.guild = guilds.name WHERE users.uuid = '{$uuid}'");
         }
     }
 }   

@@ -20,6 +20,7 @@ require_once 'config/status.conf.php'; ?>
 
     <title><?php echo CONF_TITLE; ?></title>
 
+    <link href="<?php echo CONF_CATALOG.'css/extra.css'; ?>" rel="stylesheet">
     <link href="<?php echo CONF_CATALOG.'css/'.strtolower(CONF_THEME).'.css'; ?>" rel="stylesheet">
     <style type="text/css">
         th, td {text-align: center;}

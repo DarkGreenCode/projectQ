@@ -190,7 +190,7 @@ class Main {
                     <table class=\"table\">
                         <tbody>
                             <tr><th class=\"info\">Ilość członków</th><td>{$guild->members}</td></tr>
-                            <tr><th class=\"info\">Suma punktów</th><td>{$guild->points}</td></tr>
+                            <tr><th class=\"info\">Ilość punktów</th><td>{$guild->points}</td></tr>
                             <tr><th class=\"info\">Suma zabić</th><td>{$guild->kills}</td></tr>
                             <tr><th class=\"info\">Suma zgonów</th><td>{$guild->deaths}</td></tr>
                         </tbody>
@@ -200,7 +200,7 @@ class Main {
             echo '<div class="col-md-6" style="text-align: right;">';
                 $members_info = array_combine(explode(", ", $guild->members_name), explode(", ", $guild->members_uuid));
                 foreach ($members_info as $name => $uuid) {
-                    echo "<a href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"http://avatar.hivemc.com/avatar/{$name}/200\" alt=\"{$name}\" title=\"{$name}\" width=\"25%\" class=\"img-thumbnail\"></img></a>";
+                    echo "<a class=\"tip\" href=\"".CONF_CATALOG."infoPlayer.php?uuid={$uuid}\"><img src=\"http://avatar.hivemc.com/avatar/{$name}/200\" width=\"25%\" class=\"img-thumbnail\"></img><h3><span class=\"label label-warning\">{$name}</span></h3></a>";
                 }
             echo '</div>';
         }

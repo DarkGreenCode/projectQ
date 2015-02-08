@@ -25,4 +25,4 @@ define("CONF_PLUGIN", "<nazwa_pluginu>");
 define("CONF_THEME", "Default");
 
 // Wyświetlanie błędów od PHP, przydatne podczas debugowania (true/false).
-ini_set("display_errors", "true");
+ini_set("display_errors", "false");

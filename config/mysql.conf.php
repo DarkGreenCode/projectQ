@@ -18,7 +18,8 @@ define("MYSQL_PORT", "3306");
 define("MYSQL_DB", "<baza>");
 
 // Prefix do tabel w bazie, zostaw puste jeżeli go nie ma.
-define("MYSQL_PREFIX", "<prefix_do_bazy>");
+// To pole ma znaczenie tylko dla pluginu OpenGuild.
+define("MYSQL_PREFIX", "openguild_");
 
 // Nazwa użytkownika mającego uprawnienia do podanej bazy.
 define("MYSQL_USER", "<uzytkownik>");
