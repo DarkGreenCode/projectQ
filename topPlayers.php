@@ -1,7 +1,7 @@
 <?php
 /**
  * Strona z top 100 najlepszych i najgorszych graczy.
- * @version     1.0
+ * @version     1.1
  * @package     projectQ
  * @author      SlimaK <em.slimak@gmail.com>
  * @license     https://creativecommons.org/licenses/by-nd/4.0/legalcode Creative Commons Attribution-NoDerivatives 4.0 International License
@@ -11,9 +11,9 @@
 require_once 'include/head.php';
 
 require_once CONF_ROOT.CONF_CATALOG.'config/mysql.conf.php';
-require_once CONF_ROOT.CONF_CATALOG.'class/OpenGuild.class.php';
+require_once CONF_ROOT.CONF_CATALOG.'class/Main.class.php';
 
-$projectQ = new OpenGuild();
+$projectQ = new Main();
 ?>
 
     <div class="container">
@@ -22,7 +22,7 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-warning">
                     <div class="panel-heading">Ranking setki najlepszych graczy</div>
                     <table class="table table-condensed table-striped table-hover">
-                        <?php $projectQ -> topPlayers(100); ?>
+                        <?php $projectQ -> topPlayers(15); ?>
                     </table>
                 </div>
             </div>
@@ -30,11 +30,11 @@ $projectQ = new OpenGuild();
                 <div class="panel panel-info">
                     <div class="panel-heading">Ranking setki najgorszych graczy</div>
                     <table class="table table-condensed table-striped table-hover">
-                        <?php $projectQ -> topPlayers(100, true); ?>
+                        <?php $projectQ -> topPlayers(15, true); ?>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-<?php require_once CONF_ROOT.CONF_CATALOG.'include/footer.php'; ?>
+<?php require_once 'include/footer.php'; ?>

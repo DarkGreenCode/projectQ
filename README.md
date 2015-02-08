@@ -11,6 +11,7 @@
 
 ## Wspierane pluginy
 * OpenGuild (v. 0.6.5 +)
+* FunnyGuilds (v.3.9.6.3)
  
 ## Instalacja
 1. Pobierz najnowszą wersję stabilną: **[projectQ-Stable.zip](https://github.com/SlimaKCoder/projectQ/archive/Stable.zip)**
@@ -21,7 +22,7 @@
 6. W razie problemów możesz włączyć debugowanie od PHP5 w głównej konfiguracji.
 
 ## Wymagania
-* Serwer Minecraft z działającym pluginem OpenGuild.
+* Serwer Minecraft z działającym jednym ze wspieranym pluginów.
 * Serwer MySQL w wersji 5.x.
 * Serwer WWW z PHP 5.x obsługujący MySQLi.
 * Wygenerowana przez plugin baza MySQL.

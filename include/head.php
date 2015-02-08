@@ -1,7 +1,7 @@
 <?php if (__FILE__ == $_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF']) die();
 /**
  * Nagłówek dla wszystkich stron i dynamiczny status serwera.
- * @version     1.0
+ * @version     1.1
  * @package     projectQ
  * @author      SlimaK <em.slimak@gmail.com>
  * @license     https://creativecommons.org/licenses/by-nd/4.0/legalcode Creative Commons Attribution-NoDerivatives 4.0 International License
@@ -9,7 +9,7 @@
  */
 
 require_once 'config/main.conf.php';
-require_once CONF_ROOT.CONF_CATALOG.'config/status.conf.php'; ?>
+require_once 'config/status.conf.php'; ?>
 
 <html>
 <head>

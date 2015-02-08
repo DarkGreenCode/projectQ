@@ -1,7 +1,7 @@
 <?php if (__FILE__ == $_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF']) die();
 /**
  * Stopka dla wszystkich stron.
- * @version     1.0
+ * @version     1.1
  * @package     projectQ
  * @author      SlimaK <em.slimak@gmail.com>
  * @license     https://creativecommons.org/licenses/by-nd/4.0/legalcode Creative Commons Attribution-NoDerivatives 4.0 International License
