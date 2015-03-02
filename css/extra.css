@@ -1,0 +1,21 @@
+/**
+ * Dodatkowe style CSS dla lepszego wyglądu stron.
+ * @version     1.1
+ * @package     projectQ
+ * @author      SlimaK <em.slimak@gmail.com>
+ * @license     https://creativecommons.org/licenses/by-nd/4.0/legalcode Creative Commons Attribution-NoDerivatives 4.0 International License
+ * @copyright   Copyright (c) 2014, SlimaK
+ */
+
+a.tip:hover {
+    position: relative
+}
+a.tip h3 {
+    display: none
+}
+a.tip:hover h3 {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    right: 5px;
+}
